@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8c513c63-c208-4e94-8c9d-2e7a3c7ec696}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ProjectEuler.Exercises</RootNamespace>
+    <AssemblyName>ProjectEuler.Exercises</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Name>ProjectEuler.Exercises</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Debug\ProjectEuler.Exercises.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>bin\Release\ProjectEuler.Exercises.XML</DocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <ItemGroup>
+    <Compile Include="Level02\E043.fs" />
+    <Compile Include="Other\GeneratePairs.fs" />
+    <Compile Include="Other\GyroballChallenge.fs" />
+    <Compile Include="Other\OllesChallenge.fs" />
+    <Content Include="Other\names.txt" />
+    <Compile Include="Other\GenerateCryptographicallyRandomKeys.fs" />
+    <Compile Include="Other\HtmlLiteralEncrypt.fs" />
+    <Compile Include="Other\CiterusChallenge.fs" />
+    <Compile Include="Other\NHibernateSql.fs" />
+    <Compile Include="Other\CeasarCipher.fs" />
+    <Compile Include="Other\Primes.fs" />
+    <Compile Include="Other\CardGame.fs" />
+    <Compile Include="Level01\E001.fs" />
+    <Compile Include="Level01\E002.fs" />
+    <Compile Include="Level01\E003.fs" />
+    <Compile Include="Level01\E004.fs" />
+    <Compile Include="Level01\E005.fs" />
+    <Compile Include="Level01\E006.fs" />
+    <Compile Include="Level01\E007.fs" />
+    <Compile Include="Level01\E008.fs" />
+    <Compile Include="Level01\E009.fs" />
+    <Compile Include="Level01\E010.fs" />
+    <Compile Include="Level01\E011.fs" />
+    <Compile Include="Level01\E012.fs" />
+    <Compile Include="Level01\E013.fs" />
+    <Compile Include="Level01\E014.fs" />
+    <Compile Include="Level01\E015.fs" />
+    <Compile Include="Level01\E016.fs" />
+    <Compile Include="Level01\E017.fs" />
+    <Compile Include="Level01\E018.fs" />
+    <Compile Include="Level01\E019.fs" />
+    <Compile Include="Level01\E020.fs" />
+    <Compile Include="Level01\E020b.fs" />
+    <Compile Include="Level01\E021.fs" />
+    <Compile Include="Level01\E022.fs" />
+    <Compile Include="Level01\E023.fs" />
+    <Content Include="Level01\E023_csharp.txt" />
+    <Compile Include="Level01\E024.fs" />
+    <None Include="Level01\E024_csharp.cs" />
+    <Compile Include="Level01\E025.fs" />
+    <Compile Include="Level02\E026.fs" />
+    <Compile Include="Level02\E027.fs" />
+    <Compile Include="Level02\E028.fs" />
+    <Compile Include="Level02\E029.fs" />
+    <Compile Include="Level02\E030.fs" />
+    <Compile Include="Level02\E031.fs" />
+    <Compile Include="Level02\E032.fs" />
+    <Compile Include="Level02\E033.fs" />
+    <Compile Include="Level02\E034.fs" />
+    <Compile Include="Level02\E035.fs" />
+    <Compile Include="Level02\E036.fs" />
+    <Compile Include="Level02\E037.fs" />
+    <Compile Include="Level02\E038.fs" />
+    <Compile Include="Level02\E039.fs" />
+    <Compile Include="Level02\E040.fs" />
+    <Compile Include="Level02\E041.fs" />
+    <Compile Include="Level02\E042.fs" />
+    <EmbeddedResource Include="Level02\E042_words.txt" />
+    <None Include="Script.fsx" />
+    <Compile Include="Utilities.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

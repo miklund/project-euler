@@ -1,0 +1,92 @@
+﻿namespace E023
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Linq;
+
+    public class Program
+    {
+        private const int AbundantSumMax = 28123;
+
+        public static void Main(string[] args)
+        {
+            using (new Measure(Console.Out))
+            {
+                // Just create this once
+                var defaultRange = Enumerable.Range(1, AbundantSumMax);
+
+                // Returns true if n is abundant
+                Func<int, bool> isAbundant = n => Enumerable.Range(1, n / 2).Where(x => n % x == 0).Sum() > n;
+
+                // Get all abundants up to 28123
+                var abundants = defaultRange.Where(isAbundant).ToList();
+
+                // Get abundant sums
+                var abundantSums = GetAbundantSums(abundants);
+
+                // Invert abundant sums
+                var result = defaultRange.Except(abundantSums).Sum();
+
+                // Print
+                Console.WriteLine("Result: {0}", result);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static IEnumerable<int> GetAbundantSums(IList<int> abundants)
+        {
+            // Unique set of numbers
+            var result = new HashSet<int>();
+
+            // The Tortoise and the Hare
+            foreach (var abundant in abundants)
+            foreach (var abundantSum in MapWhile(x => x + abundant, x => x <= abundant, abundants))
+            {
+                result.Add(abundantSum);
+            }
+
+            return result;
+        }
+
+        private static IList<int> MapWhile(Func<int, int> mapFunction, Func<int, bool> whilePredicate, IList<int> list)
+        {
+            var result = new List<int>();
+
+            for (var i = 0; i < list.Count && whilePredicate(list[i]); i++)
+            {
+                var abundantSum = mapFunction(list[i]);
+                if (abundantSum > AbundantSumMax)
+                {
+                    break;
+                }
+
+                result.Add(abundantSum);
+            }
+
+            return result;
+        }
+
+        private class Measure : IDisposable
+        {
+            private readonly TextWriter console;
+            private readonly Stopwatch watch;
+
+            public Measure(TextWriter console)
+            {
+                this.console = console;
+                watch = new Stopwatch();
+                watch.Start();
+            }
+
+            public void Dispose()
+            {
+                watch.Stop();
+                console.WriteLine("Execution time: {0} ms", watch.ElapsedMilliseconds);
+            }
+        }
+    }
+}
+
