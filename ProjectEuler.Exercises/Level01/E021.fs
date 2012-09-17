@@ -9,4 +9,3 @@ let amicable n =
     [1..n] |> List.filter (fun x -> x = (d (d x)) && x <> (d x))
 
 let solution = lazy (amicable 10000 |> List.sum)
-Utilities.measure_execution_time solution |> ignore

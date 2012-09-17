@@ -33,4 +33,3 @@ let sums = abundant_sums abundants abundants
 let solution = lazy ([1..28123] 
                     |> List.filter (fun x -> false = List.exists (fun y -> x = y) sums)
                     |> List.sum)
-Utilities.measure_execution_time solution |> ignore

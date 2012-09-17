@@ -35,4 +35,3 @@ let rec calc a b =
     | true -> []
 
 let solution = lazy ( calc {min = 2; max = 100} {min = 2; max = 100} |> List.length )
-Utilities.measure_execution_time solution |> ignore

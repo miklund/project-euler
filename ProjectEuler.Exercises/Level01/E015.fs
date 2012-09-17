@@ -9,4 +9,3 @@ let rec find_path square_size x y =
 
 // This will take some time
 let solution = lazy (find_path 20 0 0)
-Utilities.measure_execution_time solution |> ignore

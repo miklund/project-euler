@@ -25,4 +25,4 @@ let pandigitals =
     }
     _pandigitals(7654321)
 
-let result = pandigitals |> Seq.nth(0)
+let solution = lazy ( pandigitals |> Seq.nth(0) )

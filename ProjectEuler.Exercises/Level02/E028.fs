@@ -20,4 +20,3 @@ let rec calc i =
     | false -> 25, 9
 
 let solution = lazy (calc 501)
-Utilities.measure_execution_time solution |> ignore

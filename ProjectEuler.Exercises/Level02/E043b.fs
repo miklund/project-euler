@@ -50,7 +50,8 @@ let filterDivisibleBy n = List.filter (take 3 >> toNumber >> divisibleBy n)
 
 // work from behind, all permutations of [0..9] with 3 length
 // filter divisible by 17, 13, 11, 7, 5, 3, 2 and append a new pandigital for each iteration
-let solution = [17; 13; 11; 7; 5; 3; 2] 
+let solution = lazy ( [17; 13; 11; 7; 5; 3; 2] 
                |> List.fold (fun acc n -> acc |> filterDivisibleBy n |> appendPandigital) (permute 3 [0..9])
                |> List.map (toLong)
                |> List.sum
+               )

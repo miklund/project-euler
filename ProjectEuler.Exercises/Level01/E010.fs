@@ -14,4 +14,3 @@ let rec sum_primes top (primes:list<int>) : int64 =
         primes |> List.map (fun x -> x |> int64) |> List.sum
 
 let solution = lazy (sum_primes 2000000 [2..2000000])
-Utilities.measure_execution_time solution |> ignore

@@ -63,4 +63,3 @@ let find_async alphabet =
     |> List.sum
 
 let solution = lazy ( find_async [1; 2; 3; 4; 5; 6; 7; 8; 9] )
-Utilities.measure_execution_time solution |> ignore

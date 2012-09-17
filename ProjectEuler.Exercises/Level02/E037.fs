@@ -44,4 +44,3 @@ let rec findAllEleven = function
     | n, i -> findAllEleven(n + 1, i)
 
 let solution = lazy ( findAllEleven(11, 0) |> List.sum )
-Utilities.measure_execution_time solution |> ignore

@@ -30,4 +30,3 @@ let rec find_pythagorean_triplet triplet =
     | false -> find_pythagorean_triplet (increase triplet)
 
 let solution = lazy ( find_pythagorean_triplet {a=0;b=1;c=2} )
-Utilities.measure_execution_time solution |> ignore

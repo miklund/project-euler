@@ -71,5 +71,4 @@ let solution = lazy ([
                         find_largest_product_in_matrix (diagonal_matrix_bottom_left_to_top_right matrix) 4 0; 
                         find_largest_product_in_matrix (diagonal_matrix_top_left_to_bottom_right matrix) 4 0
                      ] |> List.max)
-Utilities.measure_execution_time solution |> ignore
                         

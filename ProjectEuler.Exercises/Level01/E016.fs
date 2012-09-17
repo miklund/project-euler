@@ -13,5 +13,3 @@ let rec calc list exp =
     | _ -> calc (list |> List.map (fun x -> x * 2) |> evenOut 0) (exp - 1)
 
 let solution = lazy ( calc [2] 1000 |> List.sum )
-Utilities.measure_execution_time solution |> ignore
-    

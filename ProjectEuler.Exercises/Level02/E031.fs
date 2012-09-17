@@ -69,7 +69,6 @@ let rec find purse previousCoin =
     | _ -> List.fold ( + ) 0 (possibleCoins |> List.map (fun c -> find (purse @ [c]) c))
         
 let solution = lazy ( find [] (TwoPound 1) )
-Utilities.measure_execution_time solution |> ignore
 
 // Not using discriminated unions, this could be one like this
 let rec find_faster n coins =
@@ -79,4 +78,3 @@ let rec find_faster n coins =
     | _ -> List.fold ( + ) 0 (coins |> List.map (fun c -> find_faster (n + c)  (coins |> List.filter (fun coin -> coin <= c))))
 
 let solution_faster = lazy ( find_faster 0 [200; 100; 50; 20; 10; 5; 2; 1] )
-Utilities.measure_execution_time solution_faster |> ignore

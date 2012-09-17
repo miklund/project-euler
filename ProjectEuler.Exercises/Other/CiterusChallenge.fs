@@ -1,8 +1,6 @@
 ﻿// http://www.citerus.se/jfokus
 module CiterusChallenge
 
-open ProjectEuler.Excercises
-
 // In the string
 let s = "VOCDIITEIOCRUDOIANTOCSLOIOCVESTAIOCVOLIOCENTSU"
 

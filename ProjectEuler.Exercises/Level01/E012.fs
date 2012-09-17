@@ -37,4 +37,3 @@ let rec find_triangle_number order number_of_divisors =
 
 // This is an expensive operation
 let solution = lazy ( (find_triangle_number 1 500) |> triangle_number )
-Utilities.measure_execution_time solution |> ignore

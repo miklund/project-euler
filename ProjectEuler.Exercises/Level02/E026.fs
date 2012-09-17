@@ -67,9 +67,6 @@ let solution =
     |> Seq.maxBy (fun x -> (snd x))
     )
 
-Utilities.measure_execution_time solution |> ignore
-
 // After creating above solution you learn that you only need to calculate primes
 // and a cycle for a prime is always the prime - 1.
 let alternate_solution = lazy ( primes [2..1000] |> List.max )
-Utilities.measure_execution_time alternate_solution |> ignore

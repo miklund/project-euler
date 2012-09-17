@@ -57,5 +57,3 @@ let solution = lazy (
     |> Async.RunSynchronously
     |> Seq.fold (><) (0L, 0)
     )
-
-Utilities.measure_execution_time solution |> ignore

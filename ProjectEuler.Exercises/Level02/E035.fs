@@ -35,4 +35,3 @@ let allCircularPrimes max =
     Seq.append [| 2; 3; 7; 9 |] topSequence
 
 let solution = lazy ( allCircularPrimes 1000000 |> Seq.length )
-Utilities.measure_execution_time solution |> ignore

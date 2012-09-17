@@ -107,4 +107,3 @@ let data = [
 
 let sum = data |> List.map (fun s -> System.Int64.Parse(s.Substring(0, 15))) |> List.sum
 let solution = lazy ((sum |> string).Substring(0, 10))
-Utilities.measure_execution_time solution |> ignore

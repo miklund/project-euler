@@ -61,5 +61,3 @@ let solution = lazy (
     let mcp = most_consecutive_primes.Value
     mcp.a * mcp.b 
     )
-
-Utilities.measure_execution_time solution |> ignore

@@ -1,0 +1,30 @@
+# Files
+Svea.Api.suo
+Main/Svea.Api/*.user
+Svea.Api.5.1.ReSharper.user
+Svea.Api.sln.docstates.suo
+Main/Svea.Api/Traces.Activity.svclog
+Main/Svea.Api/Traces.Message.svclog
+.docstates.suo
+
+*.user
+
+# Paths
+Main/Svea.Api/obj/
+Main/Svea.Core/obj/
+Main/Svea.Model/obj
+Main/Svea.Scheduler/obj/
+Test/Svea.Core.Tests/obj/
+Test/Svea.IntegrationTests/obj/
+Test/Svea.Model.Tests/obj/
+Main/Svea.Api/bin/
+Main/Svea.Core/bin/
+Main/Svea.Model/bin/
+Main/Svea.Scheduler/bin/
+Test/Svea.Core.Tests/bin/
+Test/Svea.IntegrationTests/bin/
+Test/Svea.Model.Tests/bin/
+_ReSharper.Svea.Api/
+Main/Svea.Api/logs/
+bin/
+obj/

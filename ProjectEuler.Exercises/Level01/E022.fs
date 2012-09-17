@@ -21,4 +21,3 @@ let solution = lazy (data
                 |> List.sort
                 |> List.mapi (fun i name -> (i + 1) * weight name)
                 |> List.sum)
-Utilities.measure_execution_time solution |> ignore

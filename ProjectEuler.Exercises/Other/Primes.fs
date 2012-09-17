@@ -19,4 +19,3 @@
     } |> Seq.cache
 
   let solution = lazy ( primes |> Seq.nth(10000) ) // PE007
-  ProjectEuler.Exercises.Utilities.measure_execution_time solution |> ignore

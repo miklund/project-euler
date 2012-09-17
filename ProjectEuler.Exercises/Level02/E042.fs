@@ -25,4 +25,4 @@ let is_triangle triangles (word : string) =
     triangles |> Seq.skipWhile (fun n -> n < word_value) |> Seq.nth(0) = word_value
 
 // filter word list on words that are triangles and count them
-let solution = words |> Seq.filter (is_triangle triangles) |> Seq.length
+let solution = lazy ( words |> Seq.filter (is_triangle triangles) |> Seq.length )

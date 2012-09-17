@@ -13,6 +13,6 @@ let champernowne =
         }
     _champernowne(0) |> Seq.cache
 
-// result = d[1] * d[10] * d[100] * d[1000] * d[10000] * d[100000] * d[1000000]
-let result = [0; 9; 99; 999; 9999; 99999; 999999] 
-             |> List.reduce (fun acc n -> acc * Seq.nth n champernowne)
+// solution = d[1] * d[10] * d[100] * d[1000] * d[10000] * d[100000] * d[1000000]
+let solution = lazy ( [0; 9; 99; 999; 9999; 99999; 999999] 
+                    |> List.reduce (fun acc n -> acc * Seq.nth n champernowne) )

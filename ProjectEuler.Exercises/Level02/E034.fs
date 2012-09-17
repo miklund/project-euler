@@ -22,4 +22,3 @@ let findCurious() =
 
 // Measure
 let solution = lazy ( findCurious() )
-Utilities.measure_execution_time solution |> ignore

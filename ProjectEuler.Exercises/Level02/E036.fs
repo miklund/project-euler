@@ -35,4 +35,3 @@ let sumOfAllDualPalindromic max =
     |> List.sum
 
 let solution = lazy ( sumOfAllDualPalindromic 1000000 )
-Utilities.measure_execution_time solution |> ignore

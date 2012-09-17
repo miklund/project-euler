@@ -1,5 +1,4 @@
-﻿let exec (solution : Lazy<'a>) = 
-    Utilities.measure_execution_time solution |> ignore
+﻿let exec (solution : Lazy<'a>) = solution.Force() |> ignore
 
 let rec Loop input =
     printf "Please type the PE number, or q to exit: " |> ignore

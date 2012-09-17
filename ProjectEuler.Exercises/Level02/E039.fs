@@ -15,4 +15,4 @@ let criteria p t =
 let solutions length = (permutations length) |> List.filter (criteria length)
 
 // get the p with most triangles
-let result = [1.0..999.0] |> List.maxBy (fun n -> (solutions n).Length)
+let solution = lazy ( [1.0..999.0] |> List.maxBy (fun n -> (solutions n).Length) )

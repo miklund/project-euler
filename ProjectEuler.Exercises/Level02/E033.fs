@@ -45,4 +45,3 @@ let fractions =
 
 // If the product of these four fractions is given in its lowest common terms, find the value of the denominator.
 let solution = lazy ( fractions |> Seq.fold (fun x fract -> x * fract.Value) 1. )
-Utilities.measure_execution_time solution |> ignore

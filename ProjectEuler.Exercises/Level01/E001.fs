@@ -5,4 +5,3 @@
 module E001
 
 let solution = lazy ( [0..999] |> List.filter (function n -> (n % 3 = 0) || (n % 5 = 0)) |> List.sum )
-Utilities.measure_execution_time solution |> ignore

@@ -35,4 +35,3 @@ let to_list n =
     calc n |> List.rev
 
 let solution = lazy ([2..100] |> List.map (fun x -> to_list x) |> List.fold (fun acc y -> prod acc y) [1] |> List.sum)
-Utilities.measure_execution_time solution |> ignore

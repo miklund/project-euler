@@ -48,5 +48,3 @@ let rec lexicographic_permutation word alphabet num find =
   
 let solution = lazy ( lexicographic_permutation [] [0; 1; 2; 3; 4; 5; 6; 7; 8; 9] 1 1000000
                       |> List.fold ( fun acc x -> acc + x.ToString() ) "" )
-
-Utilities.measure_execution_time solution |> ignore

@@ -13,4 +13,3 @@ let sum_of_squares list = list |> List.map (fun x -> (x |> float) ** 2.0) |> Lis
 let square_of_sums list = (list |> List.sum |> float) ** 2.0 |> int
 
 let solution = lazy ((square_of_sums [1..100]) - (sum_of_squares [1..100]))
-Utilities.measure_execution_time solution |> ignore

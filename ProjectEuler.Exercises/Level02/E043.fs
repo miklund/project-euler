@@ -24,4 +24,4 @@ let criteria v =
     number([v8; v9; v10]) |> divisibleBy 17
 
 // very brute forceish
-let solution = permutations [0..9] |> Seq.filter criteria |> Seq.fold (fun acc n -> acc + number64(n)) 0L
+let solution = lazy ( permutations [0..9] |> Seq.filter criteria |> Seq.fold (fun acc n -> acc + number64(n)) 0L )

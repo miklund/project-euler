@@ -17,4 +17,3 @@ let rec prime_of_order n primes (current:int) =
 
 
 let solution = lazy ( prime_of_order 10001 [] 2 )
-Utilities.measure_execution_time solution |> ignore

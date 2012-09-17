@@ -22,4 +22,3 @@ let power n =
     powers 10 n
 
 let solution = lazy ( power 5 |> List.sum )
-Utilities.measure_execution_time solution |> ignore

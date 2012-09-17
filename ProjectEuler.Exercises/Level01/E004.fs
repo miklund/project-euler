@@ -12,4 +12,3 @@ let solution = lazy (
         [100..999] |> List.collect (fun x -> [100..999] |> List.map (fun y -> x * y))
             |> List.filter (fun x -> is_palindrome x)
             |> List.max)
-Utilities.measure_execution_time solution |> ignore

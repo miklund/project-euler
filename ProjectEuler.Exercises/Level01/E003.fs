@@ -11,4 +11,3 @@ let rec factor (n : int64) =
         |> int
 
 let solution = lazy (factor 600851475143L)
-Utilities.measure_execution_time solution |> ignore

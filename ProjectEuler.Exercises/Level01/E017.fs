@@ -50,4 +50,3 @@ let rec translate (n:int) : string =
             (translate (part n)) + (translate (n - (part n)))
             
 let solution = lazy ((List.fold (fun acc n -> acc + translate n) "" [1..1000]).Replace(" ", System.String.Empty).Length)
-Utilities.measure_execution_time solution |> ignore

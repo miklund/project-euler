@@ -45,4 +45,3 @@ let rec data_tree (data : string list) row i =
     | _ -> Node ((data_row row).[i], data_tree data (row + 1) i, data_tree data (row + 1) (i + 1))
 
 let solution = lazy (data_tree s_data 0 0 |> calculate)
-Utilities.measure_execution_time solution |> ignore

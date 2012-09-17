@@ -37,5 +37,4 @@ let rec find n =
     | _ -> find (n + 1)
 
 let solution = lazy (find 20)
-Utilities.measure_execution_time solution |> ignore
     

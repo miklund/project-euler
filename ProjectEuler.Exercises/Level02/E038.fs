@@ -40,4 +40,3 @@ let find = seq { for n in [9..99999] do
 
 /// Get the largest product
 let solution = lazy (find |> Seq.map snd |> Seq.max)
-Utilities.measure_execution_time solution |> ignore

@@ -9,4 +9,3 @@ let rec fibonacci n1 n2 digits =
         1 + fibonacci n2 next digits
 
 let solution = lazy (fibonacci 1I 1I 1000)
-Utilities.measure_execution_time solution |> ignore
